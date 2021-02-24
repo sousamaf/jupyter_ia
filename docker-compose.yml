@@ -1,0 +1,13 @@
+version: "3"
+
+services: 
+    jupyter:
+        build: ./jupyter_ia
+        environment: 
+            - JUPYTER_ENABLE_LAB=yes
+        ports: 
+            - 8888:8888
+            - 6006:6006
+        volumes: 
+            - ./data/nltk:/usr/local/share/nltk_data
+            - ./data/home:/home/${USER}
