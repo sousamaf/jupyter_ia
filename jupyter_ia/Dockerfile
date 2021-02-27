@@ -28,10 +28,12 @@ RUN pip install jupyter-tabnine
 RUN jupyter nbextension install --py jupyter_tabnine
 RUN jupyter nbextension enable --py jupyter_tabnine
 RUN jupyter serverextension enable --py jupyter_tabnine
+RUN pip install python-language-server
 
 RUN ipython profile create
 RUN echo 'c.IPCompleter.use_jedi = False' >> ~/.ipython/profile_default/ipython_kernel_config.py
 
+WORKDIR /home/ia
 USER root
 #RUN python -m nltk.downloader -d /usr/local/share/nltk_data all
 #USER jovyan
