@@ -23,6 +23,7 @@ RUN pip install fuzzywuzzy
 RUN pip install pandas_datareader
 RUN pip install gym
 RUN pip install Keras
+RUN pip install voila
 
 RUN pip install jupyter-tabnine
 RUN jupyter nbextension install --py jupyter_tabnine
