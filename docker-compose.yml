@@ -10,4 +10,4 @@ services:
             - 6006:6006
         volumes: 
             - ./data/nltk:/usr/local/share/nltk_data
-            - ./data/home/:/home/ia/
+            - ./data/home:/tf/work

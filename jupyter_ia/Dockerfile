@@ -16,7 +16,7 @@ LABEL maintainer="Jupyter Project <jupyter@googlegroups.com>"
 #     fix-permissions "${CONDA_DIR}" && \
 #     fix-permissions "/home/${NB_USER}"
 #RUN pip install tensorboard
-
+RUN python3 -m pip install --upgrade pip
 RUN pip install SpeechRecognition
 RUN pip install --user -U nltk
 RUN pip install fuzzywuzzy
@@ -33,7 +33,12 @@ RUN pip install python-language-server
 RUN ipython profile create
 RUN echo 'c.IPCompleter.use_jedi = False' >> ~/.ipython/profile_default/ipython_kernel_config.py
 
-WORKDIR /home/ia
+## Integração com o Metatrader
+# RUN pip install MetaTrader5
+# RUN pip install matplotlib
+# RUN pip install pytz
+
+WORKDIR /tf/
 USER root
 #RUN python -m nltk.downloader -d /usr/local/share/nltk_data all
 #USER jovyan
