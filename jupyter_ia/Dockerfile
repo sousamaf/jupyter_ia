@@ -4,7 +4,7 @@
 ARG BASE_CONTAINER=tensorflow/tensorflow:latest-gpu-jupyter
 
 # Para utilizar com CPU
-#ARG BASE_CONTAINER=tensorflow/tensorflow
+# ARG BASE_CONTAINER=tensorflow/tensorflow
 
 FROM $BASE_CONTAINER
 
@@ -15,7 +15,7 @@ LABEL maintainer="Jupyter Project <jupyter@googlegroups.com>"
 #     'tensorflow-gpu==2.3.0' && \
 #     fix-permissions "${CONDA_DIR}" && \
 #     fix-permissions "/home/${NB_USER}"
-#RUN pip install tensorboard
+RUN pip install tensorboard
 RUN python3 -m pip install --upgrade pip
 RUN pip install SpeechRecognition
 RUN pip install --user -U nltk
@@ -25,6 +25,8 @@ RUN pip install gym
 RUN pip install Keras
 RUN pip install voila
 RUN pip install RISE
+
+RUN pip install atari_py
 
 RUN pip install jupyter-tabnine
 RUN jupyter nbextension install --py jupyter_tabnine
