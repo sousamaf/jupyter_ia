@@ -21,6 +21,7 @@ RUN pip install SpeechRecognition
 RUN pip install --user -U nltk
 RUN pip install fuzzywuzzy
 RUN pip install pandas_datareader
+RUN pip install sklearn
 RUN pip install gym
 RUN pip install Keras
 RUN pip install voila
