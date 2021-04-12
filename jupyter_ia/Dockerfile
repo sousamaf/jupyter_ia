@@ -26,6 +26,8 @@ RUN pip install gym
 RUN pip install Keras
 RUN pip install voila
 RUN pip install RISE
+RUN pip install pydotplus
+RUN pip install graphviz
 
 RUN pip install atari_py
 
