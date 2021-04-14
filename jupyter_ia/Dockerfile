@@ -28,7 +28,8 @@ RUN pip install voila
 RUN pip install RISE
 RUN pip install pydotplus
 RUN pip install graphviz
-
+RUN pip install seaborn
+RUN pip install simpful 
 RUN pip install atari_py
 
 RUN pip install jupyter-tabnine
